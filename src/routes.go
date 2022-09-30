@@ -11,10 +11,13 @@ var blogManager BlogManager = BlogManager{}
 // Returns Preset Routes to be used in the main function
 func GetRoutes(g *gin.Engine) {
 	blogManager.new()
+	// Protected Routes
 	protected := g.Group("/blogs")
 	protected.Use(JwtAuthMiddleware())
+
 	protected.GET("/user", getAllBlogs)
 	protected.POST("/create", createBlog)
+
 	g.GET("/", base)
 	g.GET("/blogs/all", getAllBlogs)
 	// g.GET(one)

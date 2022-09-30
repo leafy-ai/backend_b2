@@ -1,6 +1,8 @@
 # Basic Backend ( Cloud Function ) for The Blog System
 ## Introduction
 - Uses `GCP  Cloud Functions` platform and `Golang` as it's primary language.
+- Deployed at [BlogsAPI](https://us-central1-leafy-ai.cloudfunctions.net/BlogsAPI/)
+- Depends on Authenticator.
 
 ## Setup
 - Clone Repository

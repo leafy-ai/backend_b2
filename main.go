@@ -13,7 +13,7 @@ import (
 func init() {
 	entryPoint := os.Getenv("FUNCTION_TARGET")
 	if entryPoint == "" {
-		entryPoint = "HelloHTTP"
+		entryPoint = "BlogsAPI"
 	}
 	functions.HTTP(entryPoint, EntryPoint)
 }
